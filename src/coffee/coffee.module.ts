@@ -3,9 +3,11 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { CoffeeResolver } from './coffee.resolver';
 import { CoffeeService } from './coffee.service';
 import { Coffee } from './entities/coffee.entity';
+import { Flavor } from './entities/flavor.entity';
+import { CoffeeFlavorsResolver } from './coffee-flavors.resolver';
 
 @Module({
-  imports: [TypeOrmModule.forFeature([Coffee])],
-  providers: [CoffeeResolver, CoffeeService],
+  imports: [TypeOrmModule.forFeature([Coffee, Flavor])],
+  providers: [CoffeeResolver, CoffeeService, CoffeeFlavorsResolver],
 })
 export class CoffeeModule {}
