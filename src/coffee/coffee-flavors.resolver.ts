@@ -2,8 +2,8 @@ import { Parent, ResolveField, Resolver } from '@nestjs/graphql';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 
-import { Coffee } from './entities/coffee.entity';
-import { Flavor } from './entities/flavor.entity';
+import { Coffee } from './entities/coffee.entity/coffee.entity';
+import { Flavor } from './entities/flavor.entity/flavor.entity';
 
 @Resolver(() => Coffee)
 export class CoffeeFlavorsResolver {
