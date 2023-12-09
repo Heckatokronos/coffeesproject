@@ -3,10 +3,10 @@ import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { UserInputError } from 'apollo-server-express';
 
-import { Coffee } from './entities/coffee.entity';
+import { Coffee } from './entities/coffee.entity/coffee.entity';
 import { CreateCoffeInput } from './dto/create-coffee.input';
 import { UpdateCoffeeInput } from './dto/update-coffee.input';
-import { Flavor } from './entities/flavor.entity';
+import { Flavor } from './entities/flavor.entity/flavor.entity';
 
 @Injectable()
 export class CoffeeService {
